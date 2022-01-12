@@ -1,0 +1,5 @@
+@media screen and (max-width: 992px) {
+    .slick-list {
+        padding: 40px 33% !important;
+    }
+}
