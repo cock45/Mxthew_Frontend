@@ -4,8 +4,8 @@ import { BaseLabel } from "./Label";
 export const BigLabel = styled(BaseLabel)`
     font-size: 30px;
 
-    @media (max-width: 992px) {
-        font-size: 20px;
+    @media (max-width: 1200px) {
+        font-size: 24px;
     }
 
     @media (max-width: 576px) {

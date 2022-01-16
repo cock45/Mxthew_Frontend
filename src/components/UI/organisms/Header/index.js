@@ -17,8 +17,8 @@ const Body = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-
-    @media (max-width: 768px) {
+    
+    @media (max-width: 992px) {
         display: block;
     }
 `

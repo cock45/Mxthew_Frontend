@@ -30,16 +30,12 @@ const Body = styled.div`
 
     line-height: 1.2;
     -moz-transform: matrix( 0.79977058313964,0,0,0.80474761992452,0,0);
-    -webkit-transform: matrix( 0.79977058313964,0,0,0.80474761992452,0,0);
     -ms-transform: matrix( 0.79977058313964,0,0,0.80474761992452,0,0);
 
     @media (max-width: 992px) {
+        width: 100%;
         display: flex;
         align-items: center;
-    }
-
-    @media (max-width: 768px) {
-        width: 100%;
         justify-content: space-between;
         padding: 16px 15px;
     }

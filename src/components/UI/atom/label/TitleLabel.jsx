@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { BigLabel } from "./BigLabel";
 
 export const TitleLabel = (props) => {

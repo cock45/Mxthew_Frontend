@@ -94,7 +94,7 @@ const Body = styled.div`
     align-items: center;
     padding: 22px 28px 14px 14px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         width: 100%;
         justify-content: space-between;
     }

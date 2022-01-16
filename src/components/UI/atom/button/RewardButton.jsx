@@ -14,7 +14,6 @@ export const RewardButton = (props) => {
 const YellowButton = styled(BaseButton)`
     background: url('./Images/Buttons/button-1.png');
     background-size: 100% 100%;
-    font-size: 26px;
     padding: 8px 24px 18px;
     width: auto;
     height: auto;
@@ -23,13 +22,11 @@ const YellowButton = styled(BaseButton)`
     border: none;
     line-height: 45px;
 
-    @media (max-width: 992px) {
-        font-size: 20px;
-        line-height: 30px;
+    @media (min-width: 1200px) {
+        font-size: 26px;
     }
 
-    @media (max-width: 576px) {
-        font-size: 14px;
-        line-height: 24px;
+    @media (max-width: 992px) {
+        padding: 0px 24px 8px !important;
     }
 `;
