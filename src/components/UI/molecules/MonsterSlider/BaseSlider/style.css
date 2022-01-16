@@ -65,6 +65,8 @@
     font-weight: bold;
     z-index: 1;
     cursor: pointer;
+    background: transparent;
+    border: none;
 }
 
 .arrow img {

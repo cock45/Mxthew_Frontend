@@ -1,20 +1,18 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { PrimaryButton } from '../../atom/button/PrimaryButton'
+import { RewardButton } from '../../atom/button/RewardButton'
 import { StateLabelGroup } from './StateLabelGroup'
 import { useEffect } from 'react'
 import Web3 from 'web3'
 
 export const NavRewardsGroup = () => {
-    const [rewardState, setRewardState] = useState(0);
+    const [rewardState, setRewardState] = useState(73892838);
   
     const [{ metaMaskPresent, metaMaskConnected }, setMetaMaskObject] = useState({
         metaMaskPresent: false,
         metaMaskConnected: false
     });
     const [publicKey, setPublicKey] = useState("");
-    console.log("Given Provider => ", Web3.givenProvider)
-    console.log("isMetamaskPresent => ", Web3.givenProvider.isMetaMask)
     const web3 = new Web3(Web3.givenProvider || "http://localhost/8545");
 
     const shorten_pubkey = (pubkey) => {
@@ -29,7 +27,6 @@ export const NavRewardsGroup = () => {
             if(metaMaskConnected) {
                 setMetaMaskObject({ metaMaskConnected: false, metaMaskPresent: false })
                 setPublicKey("")
-                console.log("MetaMaskObject => ", metaMaskPresent, metaMaskConnected, publicKey)
             }
             else {
                 await web3?.givenProvider?.request({ method: "eth_requestAccounts" })
@@ -37,7 +34,6 @@ export const NavRewardsGroup = () => {
                 accounts = await web3.eth.getAccounts()
                 const account = shorten_pubkey(accounts[0])
                 setPublicKey(account)
-                console.log("MetaMaskObject => ", metaMaskPresent, metaMaskConnected, publicKey)
             }
         } catch (error) {
             console.error("metmask error", error);
@@ -65,20 +61,19 @@ export const NavRewardsGroup = () => {
                 />
             </RewardLabel>
             
-            <PrimaryButton>Claim Reward</PrimaryButton>
-            <Space/>
-            <PrimaryButton onClick={() => connectMetaMask()}>
+            <RewardButton>Claim Reward</RewardButton>
+            {/* <Space/> */}
+            {/* <RewardButton onClick={() => connectMetaMask()}>
                 {(metaMaskPresent && !metaMaskConnected) ? "Connect" : publicKey}
-            </PrimaryButton>
+            </RewardButton> */}
         </Body>
     )
 }
 
 const RewardLabel = styled.div`
-    background-color: #2b2278;
-    border-radius: 25px;
+    background: url('./Images/Assets/reward-button-1.png') no-repeat 50%;
+    background-size: 100% 100%;
     padding: 14px 25px 8px;
-    box-shadow: inset 0 1px 29px 8px rgb(0 0 0 / 44%);
     margin-right: 18px;
 
     @media (max-width: 992px) {
@@ -91,13 +86,13 @@ const RewardLabel = styled.div`
 `;
 
 const Body = styled.div`
-    background: url('./Images/Assets/rewards-bg.4a3eba84.png') no-repeat 50%;
+    background: url('./Images/Assets/rewards-label.png') no-repeat;
     background-size: 100% 100%;
     width: auto;
     height: auto;
     display: inline-flex;
     align-items: center;
-    padding: 22px 28px;
+    padding: 22px 28px 14px 14px;
 
     @media (max-width: 768px) {
         width: 100%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { BaseButton } from './Button'
 
-export const PrimaryButton = (props) => {
+export const RewardButton = (props) => {
     const { children } = props
 
     return (
@@ -12,8 +12,10 @@ export const PrimaryButton = (props) => {
 }
 
 const YellowButton = styled(BaseButton)`
-    background: url('./Images/Buttons/claim-button.23a369a7.png');
+    background: url('./Images/Buttons/button-1.png');
     background-size: 100% 100%;
+    font-size: 26px;
+    padding: 8px 24px 18px;
     width: auto;
     height: auto;
     text-shadow: 2px 2px 1px #000;

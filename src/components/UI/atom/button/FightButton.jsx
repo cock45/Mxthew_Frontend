@@ -12,31 +12,31 @@ export const FightButton = (props) => {
 }
 
 const RedButton = styled(BaseButton)`
-    background: url('./Images/Buttons/fight-button.47c09368.png');
+    background: url('./Images/Buttons/fight-button.png');
     background-size: 100% 100%;
-    width: calc(100% - 10px);
-    height: auto;
-    font-size: 38px;
-    text-shadow: 2px 3px 3px #000;
-    padding: 4px 18px 9px;
-    filter: drop-shadow(5px 8px 2px rgba(0,0,0,.7));
     border: none;
-    margin-bottom: 10px;
+    font-size: 28px;
+    padding: 12px 40px 22px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.35);
 
     @media (max-width: 1200px) {
         font-size: 26px;
         line-height: 36px;
+        padding: 9px 30px 19px;
     }
 
     @media (max-width: 992px) {
-        width: 70%;
         font-size: 20px;
-        padding: 0px;
+        padding: 5px 28px 15px;
     }
 
     @media (max-width: 768px) {
         font-size: 16px;
         line-height: 26px;
+        padding: 4px 24px 12px;
     }
 
     @media (max-width: 576px) {

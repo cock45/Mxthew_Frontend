@@ -1,9 +1,11 @@
 import Slider from 'react-slick'
-import { Arrow } from "components/UI/atom/button/SliderButton"
-import { Monstercard } from "../MonsterCard"
+import { Arrow } from "components/UI/atom/button/ArrowButton"
+import { Monstercard } from "../../MonsterCard/MonsterCard"
+import { FightButton } from 'components/UI/atom/button/FightButton'
 import "./style.css"
 
-export const MonsterSlider = (props) => {
+export const BaseSlider = (props) => {
+    const items = props.monsters
     const settings = {
         className: "center",
         centerMode: true,
@@ -17,8 +19,6 @@ export const MonsterSlider = (props) => {
         autoplay: false,
         breakpoint: 600,        
        
-        // variableWidth: true,
-        // adaptiveHeight: true,
         customPaging: function (i) {
             return <div className="dot"></div>;
         },
@@ -31,10 +31,8 @@ export const MonsterSlider = (props) => {
         ),
         customPaging: i => (
             <button />
-        )
+        ),
     };
-
-    const items = props.monsters;
 
     return (
         <Slider 
@@ -43,7 +41,10 @@ export const MonsterSlider = (props) => {
             prevArrow={<Arrow type="prev" />}
         >
             {items.map(item => (
-                <Monstercard monster={item} />
+                <>
+                    <Monstercard monster={item} />
+                    {!props.hidebtn ? (<FightButton>Fight!!!</FightButton>): ("")}
+                </>
             ))}
         </Slider>
     )

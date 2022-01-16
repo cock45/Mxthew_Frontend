@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const StateLabelGroup = (props) => {
     return (
         <Body>
-            <TitleLabel text={props.title} color={props.color}/>: <StateLabel text={props.count} />
+            <TitleLabel text={props.title}/>: <StateLabel text={props.count} color={props.color}/>
         </Body>
     )
 }

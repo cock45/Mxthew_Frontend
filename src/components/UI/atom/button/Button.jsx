@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BaseButton = styled.button`
     width: auto;
     height: auto;    
-    font-size: 30px;
+    font-size: 24px;
     text-shadow: #F00 2px 2px 1px;
     font-family: AgencyFB-Bold;
     line-height: normal;

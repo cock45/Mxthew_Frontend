@@ -4,7 +4,7 @@ import { StateLabelGroup } from "../../molecules/LabelGroup/StateLabelGroup"
 
 export const Attr = () => {
     const date = "12/12/2021"
-    const [stack, setStack] = useState(0)
+    const [stack, setStack] = useState(2)
 
     return (
         <Body>
@@ -23,5 +23,5 @@ export const Attr = () => {
 }
 
 const Body = styled.div`
-
+    margin-top: 50px;
 `;

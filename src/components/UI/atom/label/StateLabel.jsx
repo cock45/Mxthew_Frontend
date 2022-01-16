@@ -9,4 +9,5 @@ export const StateLabel = (props) => {
 
 const WhiteLable = styled(BigLabel)`
     color: #FFF;
+    font-weight: bold;
 `

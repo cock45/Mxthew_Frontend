@@ -1,5 +1,4 @@
-// import styled from "styled-components"
-import { CardSlice } from "../UI/organisms/CardSlice"
+import { CardSlice } from "../UI/organisms/Sliders"
 import { Attr } from "../UI/organisms/Attr"
 
 const Home = () => {
