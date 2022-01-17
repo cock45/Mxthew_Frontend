@@ -7,8 +7,8 @@ export const Header = () => {
 
     return (
         <Body>
-            <NavRewardsGroup/>
-            <NavClaimGroup/>
+            <NavRewardsGroup />
+            <NavClaimGroup />
         </Body>
     );
 }
@@ -17,6 +17,7 @@ const Body = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    text-align: center;
     
     @media (max-width: 992px) {
         display: block;

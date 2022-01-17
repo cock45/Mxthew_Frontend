@@ -7,7 +7,7 @@ import Web3 from 'web3'
 
 export const NavRewardsGroup = () => {
     const [rewardState, setRewardState] = useState(73892838);
-  
+
     const [{ metaMaskPresent, metaMaskConnected }, setMetaMaskObject] = useState({
         metaMaskPresent: false,
         metaMaskConnected: false
@@ -17,14 +17,14 @@ export const NavRewardsGroup = () => {
 
     const shorten_pubkey = (pubkey) => {
         let len = pubkey.length;
-        let shortkey = pubkey.slice(0, 5) + "....." + pubkey.slice(len-5, len);
+        let shortkey = pubkey.slice(0, 5) + "....." + pubkey.slice(len - 5, len);
         return shortkey;
     }
 
     const connectMetaMask = async () => {
         let accounts;
         try {
-            if(metaMaskConnected) {
+            if (metaMaskConnected) {
                 setMetaMaskObject({ metaMaskConnected: false, metaMaskPresent: false })
                 setPublicKey("")
             }
@@ -42,12 +42,12 @@ export const NavRewardsGroup = () => {
 
     useEffect(() => {
         const isMetaMaskPresent = () => {
-          return web3?.givenProvider?.isMetaMask ? true : false;
+            return web3?.givenProvider?.isMetaMask ? true : false;
         };
         setMetaMaskObject(() =>
-          isMetaMaskPresent()
-            ? { metaMaskPresent: true, metaMaskConnected }
-            : { metaMaskPresent: false, metaMaskConnected }
+            isMetaMaskPresent()
+                ? { metaMaskPresent: true, metaMaskConnected }
+                : { metaMaskPresent: false, metaMaskConnected }
         );
     }, [web3?.givenProvider?.isMetaMask, metaMaskConnected]);
 
@@ -60,7 +60,7 @@ export const NavRewardsGroup = () => {
                     count={rewardState}
                 />
             </RewardLabel>
-            
+
             <RewardButton>Claim Reward</RewardButton>
             {/* <Space/> */}
             {/* <RewardButton onClick={() => connectMetaMask()}>
@@ -92,11 +92,25 @@ const Body = styled.div`
     height: auto;
     display: inline-flex;
     align-items: center;
-    padding: 22px 28px 14px 14px;
+    padding: 14px 28px 14px 14px;
+
+    label {
+        font-size: 24px;
+    }
 
     @media (max-width: 992px) {
-        width: 100%;
+        width: 70%;
         justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+        label {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        width: 80%;
     }
 `
 

@@ -1,22 +1,20 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { StateLabelGroup } from "../../molecules/LabelGroup/StateLabelGroup"
+import { StateLabelGroup } from "./StateLabelGroup";
 
-export const Attr = () => {
-    const date = "12/12/2021"
-    const [stack, setStack] = useState(2)
+export const AttrLabelGroup = (props) => {
+
 
     return (
         <Body>
             <StateLabelGroup
-                color="#e02222"
+                textColor="#e02222"
                 title="Last Attack"
-                count={date}
+                count={props.lastClaim}
             />
             <StateLabelGroup
-                color="#24ff00"
                 title="Stack"
-                count={stack}
+                count={props.nextCliam}
             />
         </Body>
     )

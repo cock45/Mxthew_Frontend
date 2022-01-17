@@ -4,7 +4,7 @@ export const BaseButton = styled.button`
     width: auto;
     height: auto;    
     font-size: 24px;
-    text-shadow: #F00 2px 2px 1px;
+    text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.35);
     font-family: AgencyFB-Bold;
     line-height: normal;
     filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 8px 3px);

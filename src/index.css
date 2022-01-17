@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'BookmanOldStyle' !important;
+    font-family: 'AgencyFB-Bold' !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -11,6 +11,6 @@ body {
   }
   
   @font-face {
-    font-family: 'BookmanOldStyle';
-    src: url('/src/assets/Fonts/BookmanOldStyle.ttf') format('truetype');
+    font-family: 'AgencyFB-Bold';
+    src: url('/src/assets/Fonts/AgencyFBBold.ttf') format('truetype');
   }

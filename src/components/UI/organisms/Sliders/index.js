@@ -2,6 +2,7 @@
 import { MainSlider } from "components/UI/molecules/MonsterSlider/MainSlider";
 import { BgSlider } from "components/UI/molecules/MonsterSlider/BgSlider";
 import { SmSlider } from "components/UI/molecules/MonsterSlider/SmSlider";
+import { AttrLabelGroup } from "components/UI/molecules/LabelGroup/AttrLabelGroup";
 import "./style.css"
 
 export const CardSlice = () => {
@@ -48,36 +49,6 @@ export const CardSlice = () => {
         }
     ];
 
-    const settings_bg = {
-        className: "center",
-        centerMode: true,
-        centerPadding: '33%',
-        dots: true,
-        infinite: true,
-        speed: 300,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        breakpoint: 600,        
-       
-        // variableWidth: true,
-        // adaptiveHeight: true,
-        customPaging: function (i) {
-            return <div className="dot"></div>;
-        },
-        appendDots: dots => (
-            <div>
-              <ul className="slick-dots slick-thumb">
-                {dots}
-              </ul> 
-            </div>
-        ),
-        customPaging: i => (
-            <button />
-        )
-    };
-
     const selectCards = [
         {
             name: 'Aluntian',
@@ -108,35 +79,8 @@ export const CardSlice = () => {
         },
     ]
 
-    const settings_sm = {
-        className: "center",
-        centerMode: true,
-        centerPadding: '33%',
-        dots: true,
-        infinite: true,
-        speed: 300,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        breakpoint: 600,        
-       
-        // variableWidth: true,
-        // adaptiveHeight: true,
-        customPaging: function (i) {
-            return <div className="dot"></div>;
-        },
-        appendDots: dots => (
-            <div>
-              <ul className="slick-dots slick-thumb">
-                {dots}
-              </ul> 
-            </div>
-        ),
-        customPaging: i => (
-            <button />
-        )
-    };
+    const lastClaim = "12/12/2021"
+    const nextCliam = "4d : 3m : 23m"
 
     return (
         <>
@@ -147,8 +91,12 @@ export const CardSlice = () => {
                 <div className="d-block d-md-block d-lg-none">
                     <BgSlider monsters={monsters} />
                 </div>
-                <SmSlider monsters={selectCards}/>
+                <SmSlider monsters={selectCards} />
             </div>
+            <AttrLabelGroup
+                lastClaim={lastClaim}
+                nextCliam={nextCliam}
+            />
         </>
     )
 }

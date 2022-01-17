@@ -17,12 +17,13 @@ const Body = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-
+    transition-delay: 2s, 4ms;
     width: 700px;
     .monsterCard {
         width: 210px;
         height: 320px;
     }
+
 
     @media (max-width: 768px) {
         width: 520px;
