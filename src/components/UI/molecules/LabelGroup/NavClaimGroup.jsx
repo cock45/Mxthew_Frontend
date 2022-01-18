@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { StateLabelGroup } from './StateLabelGroup'
-import { BaseButton } from 'components/UI/atom/button/Button'
+import { HistoryButton } from 'components/UI/atom/button/HistoryButton'
 
 export const NavClaimGroup = () => {
     const [lastClaim, setLastCliam] = useState("12/12/2021");
@@ -9,8 +9,8 @@ export const NavClaimGroup = () => {
 
     return (
         <Body>
-            <YellowBtn className="d-block d-md-block d-lg-none">ROSTER</YellowBtn>
-            <YellowBtn>HISTORY</YellowBtn>
+            <HistoryButton className="d-block d-md-block d-lg-none">ROSTER</HistoryButton>
+            <HistoryButton>HISTORY</HistoryButton>
             <LabelArea>
                 <StateLabelGroup
                     textColor="#ffa200"
@@ -43,24 +43,6 @@ const LabelArea = styled.div`
     @media (max-width: 992px) {
         background: none;
         padding: 16px 15px;
-    }
-`
-
-const YellowBtn = styled(BaseButton)`
-    background: url('./Images/Buttons/claim-button.23a369a7.png');
-    background-size: 100% 100%;
-    font-weight: bold;
-    line-height: 1.2;
-    padding: 8px 35px 12px;
-    text-shadow: 2px 2px 1px #000;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    border-radius: 17px;
-    margin-right: 20px;
-
-    @media (max-width: 768px) {
-        padding-left: 30px;
-        padding-right: 30px;
     }
 `
 

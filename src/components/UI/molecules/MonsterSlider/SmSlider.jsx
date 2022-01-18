@@ -17,23 +17,38 @@ export const SmSlider = (props) => {
 const Body = styled.div`
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    width: 520px;
+    .slick-dots {
+        display: none;
+    }
+    .slick-track {
+        margin-bottom: 30px;
+    }
 
-    width: 700px;
     .monsterCard {
-        width: 180px;
-        height: 320px;
+        width: 132px;
+        height: 240px;
+    }
+
+    .slick-dots .slick-active {
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    .slick-dots .slick-active button {
+        filter: blur(2px);
     }
 
     @media (max-width: 992px) {
         width: 560px;
-        margin-top: 80px;
+        margin-top: 30px;
         .monsterCard {
             width: 150px;
             height: 270px;
         }
         .slick-dots {
-            display: none;
+            display: block;
+            bottom: 12px;
         }
     }
 

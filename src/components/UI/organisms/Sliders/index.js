@@ -77,13 +77,40 @@ export const CardSlice = () => {
             background: './Images/Assets/slider-monster-2.png',
             image: './Images/Monsters/slider-monster-2.png'
         },
+        {
+            name: 'Aluntian',
+            rate: 1,
+            attr: 'Goblin',
+            nftName: 'Universe: Eirian',
+            nft: './Images/Monsters/slider-monster-1.png.png',
+            background: './Images/Assets/slider-monster-1.png',
+            image: './Images/Monsters/slider-monster-1.png'
+        },
+        {
+            name: 'Aluntian',
+            rate: 1,
+            attr: 'Goblin',
+            nftName: 'Universe: Eirian',
+            nft: './Images/Monsters/slider-monster-2.png',
+            background: './Images/Assets/slider-monster-2.png',
+            image: './Images/Monsters/slider-monster-2.png'
+        },
+        {
+            name: 'Aluntian',
+            rate: 1,
+            attr: 'Goblin',
+            nftName: 'Universe: Eirian',
+            nft: './Images/Monsters/slider-monster-2.png',
+            background: './Images/Assets/slider-monster-2.png',
+            image: './Images/Monsters/slider-monster-2.png'
+        },
     ]
 
     const lastClaim = "12/12/2021"
     const nextCliam = "4d : 3m : 23m"
 
     return (
-        <>
+        <div style={{ position: 'relative' }}>
             <div className="container" >
                 <div className="d-none d-md-none d-lg-block">
                     <MainSlider monsters={monsters} />
@@ -97,6 +124,6 @@ export const CardSlice = () => {
                 lastClaim={lastClaim}
                 nextCliam={nextCliam}
             />
-        </>
+        </div>
     )
 }
