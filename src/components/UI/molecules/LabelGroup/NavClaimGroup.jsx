@@ -2,15 +2,17 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { StateLabelGroup } from './StateLabelGroup'
 import { HistoryButton } from 'components/UI/atom/button/HistoryButton'
+import { HistoryModal } from '../Modal/HistoryModal'
 
 export const NavClaimGroup = () => {
-    const [lastClaim, setLastCliam] = useState("12/12/2021");
-    const [nextClaim, setNextClaim] = useState("4d : 3m : 23m");
+    const [lastClaim, setLastCliam] = useState("12/12/2021")
+    const [nextClaim, setNextClaim] = useState("4d : 3m : 23m")
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
     return (
         <Body>
             <HistoryButton className="d-block d-md-block d-lg-none">ROSTER</HistoryButton>
-            <HistoryButton>HISTORY</HistoryButton>
+            <HistoryButton onClick={() => setIsModalOpen(true)}>HISTORY</HistoryButton>
             <LabelArea>
                 <StateLabelGroup
                     textColor="#ffa200"
@@ -22,6 +24,7 @@ export const NavClaimGroup = () => {
                     count={nextClaim}
                 />
             </LabelArea>
+            <HistoryModal isOpen={isModalOpen} toggleModal={setIsModalOpen} />
         </Body>
     )
 }

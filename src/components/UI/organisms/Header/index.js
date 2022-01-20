@@ -18,8 +18,14 @@ const Body = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
     text-align: center;
+    padding: 0px 10px 0px 50px;
     
+    @media (max-width: 1200px) {
+        padding: 0px 10px 0px 10px;
+    }
+
     @media (max-width: 992px) {
+        padding: 0px;
         display: block;
     }
 `

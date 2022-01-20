@@ -3,7 +3,7 @@ import { Header } from '../../UI/organisms/Header'
 import 'index.css'
 
 export const Layout = (props) => {
-    const {children} = props;
+    const { children } = props;
 
     return (
         <Body

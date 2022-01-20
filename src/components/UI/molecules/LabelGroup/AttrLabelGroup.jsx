@@ -7,7 +7,7 @@ export const AttrLabelGroup = (props) => {
     return (
         <>
             <Body>
-                <div className="d-none d-md-none d-lg-block">
+                <div className="d-none d-md-none d-lg-block labelgroup">
                     <StateLabelGroup
                         textColor="#e02222"
                         title="Last Attack"
@@ -18,7 +18,7 @@ export const AttrLabelGroup = (props) => {
                         count={props.nextCliam}
                     />
                 </div>
-                <div className="d-block d-md-block d-lg-none labelgroup">
+                <div className="d-block d-md-block d-lg-none labelgroup-mobile">
                     <StateLabelGroup
                         titleColor="#f00"
                         textColor="#fff"
@@ -46,21 +46,26 @@ const Body = styled.div`
     width: 100%;
     bottom: 50px;
     
+    .labelgroup {
+        background: url("./Images/Assets/claim-label.png") no-repeat;
+        background-size: 100% 100%;
+        padding: 20px;
+        width: 350px;
+    }
+
     @media (max-width: 992px) {
         position: relative;
         bottom: 0px;
         text-algin: center;
-        .labelgroup {
+        .labelgroup-mobile {
             margin: auto;
             display: flex !important;
-            background: url("./Images/Assets/claim-label.png") no-repeat;
-            background-size: 100% 100%;
-        }
-        .labelgroup>div {
-            margin: 12px;
-        }
-        .labelgroup label {
-            font-size: 24px;
+            div {
+                margin: 12px;
+            }
+            label {
+                font-size: 24px;
+            }
         }
     }
 `;

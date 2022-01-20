@@ -14,6 +14,7 @@ export const FightButton = (props) => {
 const RedButton = styled(BaseButton)`
     background: url('./Images/Buttons/fight-button.png');
     background-size: 100% 100%;
+    font-family: none !important;
     border: none;
     padding: 12px 40px 22px;
     font-weight: bold;
