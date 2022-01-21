@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { StateLabelGroup } from "./StateLabelGroup";
 import { HistoryButton } from "components/UI/atom/button/HistoryButton";
+import { useDispatch, useSelector } from "react-redux";
+import { rosterClickHandler } from "redux/reducer/rosterClickSlice";
 
 export const AttrLabelGroup = (props) => {
+    const isRoster = useSelector(state => state.rosterClick.value)
+    const dispatch = useDispatch()
 
     return (
         <>
@@ -32,7 +36,12 @@ export const AttrLabelGroup = (props) => {
                         count={props.nextCliam}
                     />
                 </div>
-                <HistoryButton className="d-none d-md-none d-lg-block">ROSTER</HistoryButton>
+                <HistoryButton
+                    className="d-none d-md-none d-lg-block"
+                    onClick={() => dispatch(rosterClickHandler())}
+                >
+                    {isRoster > 0 ? "BATTLE" : "ROSTER"}
+                </HistoryButton>
             </Body>
         </>
     )

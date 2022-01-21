@@ -3,15 +3,24 @@ import styled from 'styled-components'
 import { StateLabelGroup } from './StateLabelGroup'
 import { HistoryButton } from 'components/UI/atom/button/HistoryButton'
 import { HistoryModal } from '../Modal/HistoryModal'
+import { useDispatch, useSelector } from "react-redux";
+import { rosterClickHandler } from "redux/reducer/rosterClickSlice";
 
 export const NavClaimGroup = () => {
     const [lastClaim, setLastCliam] = useState("12/12/2021")
     const [nextClaim, setNextClaim] = useState("4d : 3m : 23m")
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const isRoster = useSelector(state => state.rosterClick.value)
+    const dispatch = useDispatch()
 
     return (
         <Body>
-            <HistoryButton className="d-block d-md-block d-lg-none">ROSTER</HistoryButton>
+            <HistoryButton
+                className="d-block d-md-block d-lg-none"
+                onClick={() => dispatch(rosterClickHandler())}
+            >
+                {isRoster > 0 ? "BATTLE" : "ROSTER"}
+            </HistoryButton>
             <HistoryButton onClick={() => setIsModalOpen(true)}>HISTORY</HistoryButton>
             <LabelArea>
                 <StateLabelGroup

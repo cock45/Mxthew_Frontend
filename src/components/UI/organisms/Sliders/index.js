@@ -1,9 +1,9 @@
 // import styled from "styled-components";
+import "./style.css"
 import { MainSlider } from "components/UI/molecules/MonsterSlider/MainSlider";
 import { BgSlider } from "components/UI/molecules/MonsterSlider/BgSlider";
 import { SmSlider } from "components/UI/molecules/MonsterSlider/SmSlider";
 import { AttrLabelGroup } from "components/UI/molecules/LabelGroup/AttrLabelGroup";
-import "./style.css"
 
 export const CardSlice = () => {
     const monsters = [

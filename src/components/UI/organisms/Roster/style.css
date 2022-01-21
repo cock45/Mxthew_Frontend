@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+.battle-deck {
+    width: 28%;
+    padding-bottom: 40px;
+}
+
+.card-collection {
+    width: 70%;
+}
+

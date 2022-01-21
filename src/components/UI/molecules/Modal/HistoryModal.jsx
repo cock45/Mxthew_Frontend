@@ -1,6 +1,7 @@
 import Modal from "react-modal"
 import { StateLabelGroup } from "../LabelGroup/StateLabelGroup"
 import { CloseButton } from "components/UI/atom/button/CloseButton"
+import { MyScrollbar } from "../Scrollbar"
 import "./style.css"
 
 export const HistoryModal = (props) => {
@@ -55,23 +56,21 @@ export const HistoryModal = (props) => {
                 count={header.text}
                 className="history-modal-header"
             />
-            <div className="content small-scroll">
-                <div className="force-overflow">
-                    {contents.map(content => (
-                        <div className="item">
-                            <StateLabelGroup
-                                title={content.id}
-                                count={content.id_value}
-                            />
-                            <StateLabelGroup
-                                title={content.status}
-                                count={content.status_value}
-                                titleColor={content.status === "LOSE" ? "#6a0d0d" : "#24ff00"}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <MyScrollbar>
+                {contents.map(content => (
+                    <div className="item">
+                        <StateLabelGroup
+                            title={content.id}
+                            count={content.id_value}
+                        />
+                        <StateLabelGroup
+                            title={content.status}
+                            count={content.status_value}
+                            titleColor={content.status === "LOSE" ? "#6a0d0d" : "#24ff00"}
+                        />
+                    </div>
+                ))}
+            </MyScrollbar>
         </Modal>
     )
 }
