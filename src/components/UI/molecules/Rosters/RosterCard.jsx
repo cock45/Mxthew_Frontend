@@ -14,7 +14,7 @@ export const RosterCard = (props) => {
     }
 
     return (
-        <Body>
+        <Body className="roster-card">
             <div>
                 <div>
                     <img src="./Images/Assets/shell.png" className="sm-img" style={{ marginRight: '5px' }} />
@@ -42,13 +42,16 @@ export const RosterCard = (props) => {
                 background={props.button === "Deploy" ? "./Images/Buttons/Group-93-copy.png" : "./Images/Buttons/fight-button.47c09368.png"} className="btn-remove">
                 {props.button}
             </HistoryButton>
+            {props.button === "Remove" && (
+                <div className="time-label">
+                    <StateLabelGroup title="00" count="00" />
+                </div>
+            )}
         </Body>
     )
 }
 
 const Body = styled.div`
-    width: 10vw;
-    height: 16vw;
     border: 2px solid #fff;
     border-radius: 8px;
     padding: 5px;
@@ -66,7 +69,7 @@ const Body = styled.div`
         color: #fff;
         display: flex;
         justify-content: space-between;
-        margin: 5px;
+        margin-top: 3px;
     }
 
     .name-label h2 {
@@ -84,15 +87,15 @@ const Body = styled.div`
     .footer-label {
         display: flex;
         justify-content: space-between;
-        padding: 20px 10px 40px;
+        padding: 10px 0px;
     }
 
     .footer-label .title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .footer-label .state {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .btn-remove {
@@ -105,10 +108,22 @@ const Body = styled.div`
         padding: 5px 36px 8px;
     }
 
+    .time-label {
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        transform: translate(-50%, 0px);
+    }
 
-    // @media (max-width: 1600px) {
-    //     width: 12vw;
-    // }
+    .time-label label {
+        font-size: 18px;
+    }
+
+
+    @media (min-width: 1600px) {
+        width: 160px;
+        height: 256px;
+    }
 `
 // remove: #cf0005
 // deploy: #01670b

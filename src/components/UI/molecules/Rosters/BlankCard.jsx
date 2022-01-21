@@ -9,8 +9,6 @@ export const BlankCard = () => {
 }
 
 const Blank = styled.div`
-    width: 10vw;
-    height: 16vw;
     border: 2px solid #fff;
     border-radius: 8px;
     background-color: rgba(0, 108, 191, 0.502);
@@ -29,5 +27,10 @@ const Blank = styled.div`
     button i {
       color: rgb(0, 108, 191);
       font-size: 4vw;
+    }
+
+    @media (min-width: 1600px) {
+        width: 160px;
+        height: 256px;
     }
 `

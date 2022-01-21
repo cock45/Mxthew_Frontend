@@ -9,57 +9,31 @@ export const BattleDeck = (props) => {
 
     return (
         <Deck className="battle-deck">
-            <div className="container">
-                <div className="titlebar">
-                    <h3>Battle Deck</h3>
-                    <StateLabelGroup
-                        title="ROSTER"
-                        titleColor="#00fffc"
-                        count="1/10"
-                    />
-                </div>
-                <MyScrollbar>
-                    <div className="row">
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-
-                        <div className="col-lg-6 col-md-4">
-                            <BlankCard />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <BlankCard />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <BlankCard />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <BlankCard />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                        <div className="col-lg-6 col-md-4">
-                            <RosterCard button="Remove" />
-                        </div>
-                    </div>
-                </MyScrollbar>
+            <div className="titlebar">
+                <h3>Battle Deck</h3>
+                <StateLabelGroup
+                    title="ROSTER"
+                    titleColor="#00fffc"
+                    count="1/10"
+                />
             </div>
+            <MyScrollbar>
+                <div className="row">
+                    <div className="col-lg-6 col-md-4">
+                        <RosterCard button="Remove" />
+                    </div>
+                    <div className="col-lg-6 col-md-4">
+                        <RosterCard button="Remove" />
+                    </div>
+
+                    <div className="col-lg-6 col-md-4">
+                        <BlankCard />
+                    </div>
+                    <div className="col-lg-6 col-md-4">
+                        <BlankCard />
+                    </div>
+                </div>
+            </MyScrollbar>
         </Deck>
     )
 }
@@ -72,6 +46,7 @@ const Deck = styled.div`
     background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(1,39,97,.5) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(1,39,97,.5) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(1,39,97,.5) 100%);
+    padding-right: 10px;
 
     .titlebar {
         display: flex;
@@ -87,25 +62,31 @@ const Deck = styled.div`
     }
 
     .row {
-        padding-right: 20px;
-        padding-left: 5px;
+        padding-right: 10px;
+        margin: 0px;
     }
 
-    .col-lg-6 {
-        margin-bottom: 40px;
-        padding-right: calc(var(--bs-gutter-x) * .5);
-        padding-left: calc(var(--bs-gutter-x) * .5);
+    .col-lg-6, .col-md-4 {
+        margin-bottom: 55px;
+        /* padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);  */
     }
 
     .content {
         height: 60vh;
+        padding: 0px;
     }
 
     .content {
-        height: calc(32vw + 40px) !important;
+        height: 570px !important;
     }
 
     .force-overflow {
-        height: calc(320vw + 900px) !important;
+        height: 5520px !important;
+    }
+
+    .roster-card {
+        margin-left: auto;
+        margin-right: auto;
     }
 `
