@@ -20,11 +20,11 @@ const Body = styled.div`
     text-align: center;
     padding: 0px 10px 0px 50px;
     
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
         padding: 0px 10px 0px 10px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         padding: 0px;
         display: block;
     }

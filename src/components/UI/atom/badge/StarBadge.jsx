@@ -28,4 +28,5 @@ export const StarBadge = (props) => {
 
 const Body = styled.div`
     display: inline-block;
+    flex: 1;
 `

@@ -17,3 +17,42 @@
 .btn-battle {
     margin: 30px 0px 36px;
 }
+
+@media (max-width: 1399px) {
+    .battle-deck {
+        width: 30%;
+    }
+    .card-collection {
+        width: calc(69% - 5px);
+    }
+    .btn-remove {
+        font-size: 16px !important;
+        padding: 5px 24px 6px !important;
+    }
+}
+@media (max-width: 991px) {
+    .main {
+        display: block;
+    }
+    .card-collection, .battle-deck {
+        width: 100%;
+    }
+    .col-md-4 {
+        display: flex;
+    }
+    .small-scroll::-webkit-scrollbar-track {
+        margin: 0px 16px;
+    }
+}
+
+    /* 
+    @media (max-width: 767px) {
+        width: 
+    } 
+    @media (max-width: 575px) {
+        width: 
+    }
+    @media (max-width: 479px) {
+        width: 
+    }
+    */

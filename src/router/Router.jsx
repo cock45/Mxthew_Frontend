@@ -7,9 +7,9 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={
-            <Layout>
-                <Home />
-            </Layout>
+          <Layout>
+            <Home />
+          </Layout>
         } />
       </Routes>
     </BrowserRouter>

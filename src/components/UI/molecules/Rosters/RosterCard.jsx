@@ -16,15 +16,19 @@ export const RosterCard = (props) => {
     return (
         <Body className="roster-card">
             <div>
-                <div>
-                    <img src="./Images/Assets/shell.png" className="sm-img" style={{ marginRight: '5px' }} />
+                <div className="toparea">
+                    <div>
+                        <img src="./Images/Assets/shell.png" className="sm-img" style={{ marginRight: '5px' }} />
+                    </div>
                     <StarBadge
                         rate={monster.rate}
                         limit="4"
                         activeColor="#fff"
                         blankColor="#042e7e"
                     />
-                    <img src="./Images/Assets/monster-id.png" className="sm-img" style={{ float: 'right' }} />
+                    <div className="text-right">
+                        <img src="./Images/Assets/monster-id.png" className="sm-img" />
+                    </div>
                 </div>
                 <div className="name-label">
                     <h2>{monster.name}</h2>
@@ -56,6 +60,8 @@ const Body = styled.div`
     border-radius: 8px;
     padding: 5px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 
     .sm-img {
         max-height: 24px;
@@ -63,6 +69,11 @@ const Body = styled.div`
 
     i {
         margin-right: 2px;
+    }
+
+    .toparea {
+        display: flex;
+        align-items: center;
     }
 
     .name-label {
@@ -104,29 +115,172 @@ const Body = styled.div`
         bottom: 0px;
         transform: translate(-50%, 50%);
         border: none;
-        font-size: 18px;
-        padding: 5px 36px 8px;
+        font-size: 20px;
+        padding: 0px 0px 3px 0px !important;
+        width: 100px;
+        height: 36px;
     }
 
     .time-label {
         position: absolute;
         left: 50%;
-        bottom: -50px;
+        bottom: -46px;
         transform: translate(-50%, 0px);
+        background-color: rgb(43, 34, 120);
+        box-shadow: inset 0px 10px 21px 0px rgba(0, 0, 0, 0.54);
+        padding: 0px 5px 0px;
+        border-radius: 12px;
     }
-
+    .time-label div{
+        line-height: 24px !important;
+    }
     .time-label label {
         font-size: 18px;
     }
+    
+    width: 160px;
+    height: 256px;
+        
+    @media (max-width: 1399px) {
+        width: 140px;
+        height: 224px;
+        .btn-remove {
+            width: 86px;
+            height: 30px;
+            font-size: 16px !important;
+        }
+    }
+    @media (max-width: 1199px) {
+        width: 120px;
+        height: 192px;
 
+        .sm-img {
+            max-height: 20px;
+        }
+        i {
+            font-size: 14px;
+        }
+        .footer-label {
+            padding: 5px 0px;
+        }
+        .footer-label .title {
+            font-size: 12px;
+        }
+        .footer-label .state {
+            font-size: 16px;
+        }
+        .btn-remove {
+            width: 75px;
+            height: 26px;
+            font-size: 14px !important;
+        }
+        .time-label {
+            border-radius: 10px;
+            bottom: -42px;
+        }
+        .time-label label {
+            font-size: 16px;
+        }
+        
+    }
+    @media (max-width: 991px) {
+        width: 200px;
+        height: auto;
+        padding-bottom: 40px;
+        padding: 5px 12px 45px;
 
-    @media (min-width: 1600px) {
-        width: 160px;
-        height: 256px;
+        .sm-img {
+            max-height: 24px;
+        }
+        i {
+            font-size: 18px;
+            margin-left: 3px;
+        }
+        .img-area {
+            padding: 16px 10px;
+        }
+        .name-label h2, .footer-label .state
+        {
+             font-size: 24px;
+        }
+        .footer-label .title {
+            font-size: 18px;
+        }
+        .btn-remove {
+            width: 132px;
+            height: 36px;
+            font-size: 20px !important;
+        }
+        .time-label {
+            bottom: 20px;
+            padding: 0px 10px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        width: 150px;
+        padding: 5px 10px 45px;
+        .sm-img {
+            max-height: 22px;
+        }
+        i {
+            font-size: 14px;
+            margin-left: 2px;
+            margin-right: 0px;
+        }
+        .name-label h2, .footer-label .state
+        {
+            font-size: 18px;
+        }
+        .footer-label .title {
+            font-size: 14px;
+        }
+        .btn-remove {
+            width: 96px;
+            height: 30px;
+            font-size: 18px !important;
+        } 
+    }
+
+    @media (max-width: 575px) {
+        width: 38vw;
+        padding-top: 10px;
+        .sm-img {
+            max-height: 28px;
+        }
+        i {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        .name-label h2, .footer-label .state
+        {
+            font-size: 24px;
+        }
+        .footer-label .title {
+            font-size: 18px;
+        }
+        .btn-remove {
+            width: 60%;
+            height: 6vw;
+            font-size: 18px !important;
+        } 
+    }
+
+    @media (max-width: 479px) {
+        padding-top: 10px;
+        .sm-img {
+            max-height: 24px;
+        }
+        i {
+            font-size: 16px;
+            margin-left: 3px;
+        }
+        .name-label h2, .footer-label .state
+        {
+            font-size: 20px;
+        }
+        .footer-label .title {
+            font-size: 14px;
+        }
     }
 `
-// remove: #cf0005
-// deploy: #01670b
-// power: #750f29
-// accurracy: #00c4ee
-// total character: #00fcff

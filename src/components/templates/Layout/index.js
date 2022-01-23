@@ -6,9 +6,7 @@ export const Layout = (props) => {
     const { children } = props;
 
     return (
-        <Body
-            className="container"
-        >
+        <Body>
             <Header />
             {children}
         </Body>
@@ -22,7 +20,7 @@ const Body = styled.div`
     padding: 10px 20px;
     max-width: 100%;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         padding: 15px;
         background: url("/Images/mobile-bg.a3c60a42.png") no-repeat 50%;
         background-size: cover;

@@ -22,11 +22,11 @@ const YellowButton = styled(BaseButton)`
     border: none;
     line-height: 45px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1199px) {
         font-size: 26px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         padding: 0px 24px 8px !important;
     }
 `;

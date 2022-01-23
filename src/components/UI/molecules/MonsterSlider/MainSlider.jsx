@@ -6,11 +6,11 @@ export const MainSlider = (props) => {
     const monsters = props.monsters
 
     return (
-        <Body>
+        <Body className="container">
             <div className="row">
                 {monsters.map(monster => (
-                    <div className="col-3">
-                        <Monstercard  
+                    <div className="col-md-3">
+                        <Monstercard
                             monster={monster}
                         />
                         <FightButton>Fight!!!</FightButton>
@@ -24,20 +24,18 @@ export const MainSlider = (props) => {
 const Body = styled.div`
     margin-left: auto;
     margin-right: auto;
+    padding: 0px 120px;
     text-align: center;
-
-    width: 1000px;
 
     .monsterCard {
         width: 215px;
         height: 340px;
     }
 
-    @media (max-width: 1300px) {
-        width: 800px;
-        .monsterCard {
-            width: 170px;
-            height: 270px;
-        }
+    @media (max-width: 1399px) {
+        padding: 0px 30px;
+    }
+    @media (max-width: 1199px) {
+        padding: 0px;
     }
 `

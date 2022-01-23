@@ -16,7 +16,7 @@ export const HistoryButton = (props) => {
         border-radius: 17px;
         margin-right: 20px;
     
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding-left: 30px;
             padding-right: 30px;
         }

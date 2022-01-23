@@ -44,6 +44,7 @@ const LabelArea = styled.div`
     padding: 18px 50px 12px;
     border-radius: 25px;
     display: inline-block;
+    text-align: left;
     line-height: 1.2;
     -moz-transform: matrix( 0.79977058313964,0,0,0.80474761992452,0,0);
     -ms-transform: matrix( 0.79977058313964,0,0,0.80474761992452,0,0);
@@ -52,7 +53,7 @@ const LabelArea = styled.div`
         line-height: 24px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         background: none;
         padding: 16px 15px;
     }
@@ -66,25 +67,25 @@ const Body = styled.div`
         line-height: 24px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         flex-direction: row-reverse;
         justify-content: space-between;
         background: url('./Images/Assets/claim-label.png') no-repeat;
         background-size: 100% 100%;
-        margin: 0px 30px;
+        margin: 24px 30px 0px;
         padding: 0px 40px 0px 30px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         label {
             font-size: 18px;
         }
         padding: 0px 10px;
-        margin: 0px 20px;
+        margin: 24px 20px 0px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         padding: 0px;
-        margin: 0px;
+        margin: 24px 0px 0px;
     }
 `

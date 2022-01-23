@@ -111,7 +111,7 @@ export const CardSlice = () => {
 
     return (
         <div style={{ position: 'relative' }}>
-            <div className="container" >
+            <div>
                 <div className="d-none d-md-none d-lg-block">
                     <MainSlider monsters={monsters} />
                 </div>

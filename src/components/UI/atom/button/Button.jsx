@@ -11,22 +11,22 @@ export const BaseButton = styled.button`
     color: #FFF;
     padding: 4px 18px 9px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
         font-size: 24px;
         line-height: 36px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         font-size: 20px;
         line-height: 30px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         font-size: 16px;
         line-height: 26px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         font-size: 14px;
         line-height: 24px;
     }

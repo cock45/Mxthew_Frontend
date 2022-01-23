@@ -39,7 +39,7 @@ const Body = styled.div`
         filter: blur(2px);
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         width: 560px;
         margin-top: 30px;
         .monsterCard {
@@ -52,7 +52,7 @@ const Body = styled.div`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         width: 420px;
         margin-top: 20px;
         .monsterCard {
@@ -61,7 +61,7 @@ const Body = styled.div`
         }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         width: 90vw;
         margin-top: 0px;
         .monsterCard {

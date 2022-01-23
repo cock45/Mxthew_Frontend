@@ -29,8 +29,30 @@ const Blank = styled.div`
       font-size: 4vw;
     }
 
-    @media (min-width: 1600px) {
-        width: 160px;
-        height: 256px;
+    width: 160px;
+    height: 256px;
+    @media (max-width: 1399px) {
+        width: 140px;
+        height: 224px;
     }
+    @media (max-width: 1199px) {
+        width: 120px;
+        height: 192px;
+    }
+    @media (max-width: 991px) {
+        height: auto;
+        width: 100%;
+    }
+    /* 
+    
+    @media (max-width: 767px) {
+        width: 
+    } 
+    @media (max-width: 575px) {
+        width: 
+    }
+    @media (max-width: 479px) {
+        width: 
+    }
+    */
 `

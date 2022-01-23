@@ -25,7 +25,7 @@ const Body = styled.div`
     }
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         width: 520px;
         margin-top: 20px;
         .monsterCard {
@@ -34,7 +34,7 @@ const Body = styled.div`
         }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         width: 90vw;
         margin-top: 0px;
         .monsterCard {

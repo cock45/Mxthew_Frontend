@@ -62,7 +62,7 @@ const Body = styled.div`
         width: 350px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         position: relative;
         bottom: 0px;
         text-algin: center;

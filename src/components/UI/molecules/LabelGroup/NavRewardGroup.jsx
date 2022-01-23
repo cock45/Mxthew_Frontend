@@ -76,11 +76,11 @@ const RewardLabel = styled.div`
     padding: 14px 25px 8px;
     margin-right: 18px;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         padding: 8px 25px 6px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         padding: 5px 15px 3px;
     }
 `;
@@ -98,18 +98,18 @@ const Body = styled.div`
         font-size: 24px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         width: 70%;
         justify-content: space-between;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         label {
             font-size: 18px;
         }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         width: 80%;
     }
 `

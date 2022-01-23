@@ -18,7 +18,7 @@
     background-color: transparent !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .ReactModal__Content.ReactModal__Content--after-open {
         inset: 200px 30% 40px !important;
         max-height: 500px !important;
@@ -28,13 +28,13 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .ReactModal__Content.ReactModal__Content--after-open {
         inset: 200px 25% 40px !important;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .ReactModal__Content.ReactModal__Content--after-open {
         max-height: 400px !important;
     }
