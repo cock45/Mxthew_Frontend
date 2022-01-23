@@ -131,6 +131,7 @@ export const CardCollection = (props) => {
                     </div>
                 </div>
             </MyScrollbar>
+            <div className="page-number">{currentPage + 1}/{totalPages}</div>
         </Collection>
     )
 }
