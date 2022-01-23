@@ -1,0 +1,62 @@
+anim_cat_robot_03.png
+size:2974,2189
+filter:Linear,Linear
+pma:true
+after left
+bounds:804,1123,385,679
+offsets:19,14,423,711
+rotate:90
+after right
+bounds:2132,556,393,669
+offsets:17,14,429,701
+rotate:90
+body
+bounds:1485,1083,747,445
+offsets:1,2,749,448
+fx_circle
+bounds:2,1288,800,899
+offsets:5,3,809,905
+hand_left
+bounds:2,40,552,737
+offsets:1,1,554,739
+rotate:90
+hand_right
+bounds:2130,1559,669,628
+offsets:1,1,671,630
+head
+bounds:1483,1530,645,657
+offsets:1,1,651,659
+leg_left
+bounds:2426,2,256,552
+offsets:1,1,259,554
+leg_right
+bounds:2684,224,278,330
+offsets:1,1,281,332
+light white
+bounds:2234,951,606,606
+offsets:29,29,664,664
+rough blue
+bounds:804,1510,677,677
+offsets:10,10,697,697
+rough blue white
+bounds:1965,95,459,459
+offsets:12,12,483,482
+rough pink
+bounds:2,594,691,692
+offsets:1,4,693,697
+under
+bounds:2684,24,288,198
+offsets:1,1,291,200
+wing left 1
+bounds:1354,29,609,601
+offsets:8,1,618,610
+wing left 2
+bounds:1428,637,702,444
+offsets:14,1,717,460
+wing right 3
+bounds:695,632,489,731
+offsets:1,1,501,743
+rotate:90
+wing right 4
+bounds:741,32,611,598
+offsets:1,1,621,607

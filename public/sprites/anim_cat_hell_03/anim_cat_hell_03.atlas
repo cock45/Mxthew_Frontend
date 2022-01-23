@@ -1,0 +1,81 @@
+anim_cat_hell_03.png
+size:2947,1845
+filter:Linear,Linear
+pma:true
+body
+bounds:2602,597,349,338
+offsets:1,1,351,340
+rotate:90
+cloth
+bounds:2602,361,255,234
+offsets:1,1,257,236
+eyebrown
+bounds:1104,25,156,88
+offsets:1,1,159,90
+eyes
+bounds:869,285,314,87
+offsets:1,1,317,89
+rotate:90
+fx
+bounds:1782,1290,553,553
+offsets:27,24,604,604
+garter
+bounds:1104,115,237,109
+offsets:1,1,239,111
+hand left
+bounds:2085,2,440,317
+offsets:1,1,442,319
+hand right
+bounds:716,1145,698,710
+offsets:2,1,701,712
+rotate:90
+hat
+bounds:2337,1561,470,282
+offsets:2,1,473,284
+head
+bounds:2085,321,515,506
+offsets:1,1,518,508
+leg right
+bounds:2527,29,290,341
+offsets:1,2,292,344
+rotate:90
+monster body
+bounds:2,601,968,542
+offsets:1,1,970,544
+monster ear left
+bounds:2337,1290,269,303
+offsets:1,1,271,305
+rotate:90
+monster ear right
+bounds:2642,1290,269,303
+offsets:1,1,271,305
+rotate:90
+monster eye
+bounds:869,68,233,156
+offsets:1,1,235,159
+monster head
+bounds:1386,113,697,678
+offsets:1,1,700,680
+monster leg right 1
+bounds:972,226,376,378
+offsets:1,1,378,380
+monster leg right 2
+bounds:2276,948,340,525
+offsets:1,1,342,527
+rotate:90
+monster mouth
+bounds:972,606,537,412
+offsets:1,1,539,414
+rotate:90
+monster tail
+bounds:1428,793,352,1050
+skull
+bounds:1782,829,492,459
+offsets:10,10,512,478
+wing left
+bounds:2,1145,712,698
+offsets:1,1,715,700
+wing right
+bounds:2,25,574,865
+offsets:1,1,577,867
+rotate:90

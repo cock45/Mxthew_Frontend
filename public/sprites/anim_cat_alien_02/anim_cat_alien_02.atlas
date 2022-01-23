@@ -1,0 +1,41 @@
+anim_cat_alien_02.png
+size:2916,1278
+filter:Linear,Linear
+pma:true
+body
+bounds:2,532,969,744
+offsets:4,2,975,762
+eyes
+bounds:1775,200,569,292
+offsets:1,1,571,294
+rotate:90
+gum left
+bounds:973,771,505,1095
+rotate:90
+gum right
+bounds:973,479,290,800
+rotate:90
+head
+bounds:2070,519,844,757
+offsets:2,2,848,760
+horn left
+bounds:744,2,475,534
+offsets:1,2,477,537
+rotate:90
+horn right
+bounds:1280,11,322,466
+offsets:1,2,324,469
+mouth 1
+bounds:2,24,740,506
+offsets:2,2,743,509
+nose
+bounds:2718,302,215,171
+offsets:1,1,217,173
+rotate:90
+saliva
+bounds:2069,278,239,647
+rotate:90
+skull
+bounds:2069,7,269,561
+offsets:1,1,271,563
+rotate:90

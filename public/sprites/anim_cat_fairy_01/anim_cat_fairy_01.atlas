@@ -1,0 +1,71 @@
+anim_cat_fairy_01.png
+size:2909,1064
+filter:Linear,Linear
+pma:true
+Group 18
+bounds:1449,36,221,351
+offsets:1,1,224,353
+body
+bounds:2267,673,389,407
+offsets:1,1,391,409
+rotate:90
+cloth left 1
+bounds:1153,638,606,424
+offsets:1,1,608,427
+cloth left 2
+bounds:2,443,559,619
+cloth left 3
+bounds:1153,389,507,247
+offsets:1,1,510,251
+cloth right 1
+bounds:2214,323,416,348
+offsets:1,11,418,360
+cloth right 2
+bounds:2,2,516,439
+eyes
+bounds:2041,162,379,159
+offsets:1,1,381,161
+gold
+bounds:2422,146,175,177
+offsets:2,1,178,180
+rotate:90
+hand left 1
+bounds:2601,3,254,277
+offsets:1,1,256,279
+rotate:90
+hand left 2
+bounds:2632,259,254,368
+offsets:1,1,256,370
+head
+bounds:563,517,588,545
+offsets:2,1,592,547
+leaf 1
+bounds:1662,455,92,181
+offsets:1,2,95,184
+leaf 2
+bounds:2041,17,143,154
+offsets:1,1,145,157
+rotate:90
+leg left 1
+bounds:563,291,493,224
+offsets:1,1,495,226
+leg left 2
+bounds:2676,629,231,433
+offsets:1,1,233,435
+leg right 1
+bounds:1761,374,451,307
+offsets:1,1,453,309
+leg right 2
+bounds:520,54,235,459
+offsets:1,1,238,461
+rotate:90
+lotus
+bounds:1058,40,347,389
+offsets:2,2,350,392
+rotate:90
+neck
+bounds:1761,683,504,379
+offsets:1,1,507,381
+under
+bounds:1672,9,367,363
+offsets:1,1,369,365

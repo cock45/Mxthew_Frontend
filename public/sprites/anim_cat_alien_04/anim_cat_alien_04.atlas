@@ -1,0 +1,96 @@
+anim_cat_alien_04.png
+size:2950,2747
+filter:Linear,Linear
+pma:true
+body
+bounds:2134,569,552,333
+offsets:0,0,560,333
+rotate:90
+eye left
+bounds:2668,193,247,280
+offsets:1,1,249,282
+rotate:90
+eye mid
+bounds:1474,302,151,160
+offsets:1,1,153,162
+eye right
+bounds:2134,1123,247,283
+offsets:1,1,249,285
+rotate:90
+hand left
+bounds:2059,2128,617,859
+offsets:1,1,619,861
+rotate:90
+hand right
+bounds:1626,1372,738,806
+offsets:1,1,741,808
+rotate:90
+head
+bounds:568,270,1069,659
+offsets:1,1,1071,661
+rotate:90
+horn left
+bounds:2469,689,256,382
+offsets:1,1,258,384
+rotate:90
+horn right
+bounds:2621,947,300,382
+offsets:1,1,303,384
+ice 1
+bounds:1229,464,445,883
+offsets:11,10,470,919
+ice 2
+bounds:2,78,564,1242
+offsets:13,10,591,1280
+ice 3
+bounds:2,1322,542,1423
+offsets:13,10,569,1459
+ice 4
+bounds:1200,1349,424,1396
+offsets:12,10,446,1435
+ice 5
+bounds:546,1341,652,1404
+offsets:14,9,679,1438
+ice 6
+bounds:1676,519,456,851
+offsets:15,10,482,885
+ice front 1
+bounds:2434,1331,259,405
+offsets:15,15,295,453
+rotate:90
+ice front 2
+bounds:2469,442,245,366
+offsets:10,10,269,399
+rotate:90
+ice front 3
+bounds:1676,2112,370,633
+offsets:13,7,393,663
+ice front 4
+bounds:2421,74,245,366
+offsets:14,10,269,399
+leg left
+bounds:2059,73,444,360
+offsets:1,1,446,362
+rotate:90
+leg right
+bounds:1630,4,458,427
+offsets:1,1,460,429
+rotate:90
+light fx
+bounds:2419,1129,200,200
+offsets:1,1,202,202
+meat
+bounds:1229,289,243,173
+offsets:1,1,245,175
+snow
+bounds:2434,1592,534,511
+offsets:12,12,557,534
+rotate:90
+teeth left
+bounds:568,2,266,529
+offsets:1,1,268,532
+rotate:90
+teeth right
+bounds:1099,2,266,529
+offsets:1,1,268,532
+rotate:90

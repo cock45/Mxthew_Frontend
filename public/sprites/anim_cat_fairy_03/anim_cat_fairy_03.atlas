@@ -1,0 +1,132 @@
+anim_cat_fairy_03.png
+size:2828,2103
+filter:Linear,Linear
+pma:true
+body
+bounds:2533,1014,288,284
+offsets:1,1,291,286
+eyes
+bounds:2037,619,327,172
+offsets:1,1,329,174
+gold
+bounds:2047,131,143,140
+offsets:2,1,146,142
+rotate:90
+gold unicorn
+bounds:2376,1165,155,133
+offsets:1,1,157,135
+hand right
+bounds:2366,535,345,259
+offsets:1,1,347,261
+head
+bounds:1568,40,535,477
+offsets:1,1,537,479
+rotate:90
+leaf
+bounds:2378,1610,237,376
+offsets:1,1,239,378
+rotate:90
+lef left
+bounds:2037,1161,221,337
+offsets:1,3,223,341
+rotate:90
+leg left
+bounds:2000,793,366,223
+offsets:1,2,369,226
+rotate:90
+leg right
+bounds:2378,1849,252,424
+offsets:1,1,254,426
+rotate:90
+neck
+bounds:1172,573,297,200
+offsets:1,1,300,202
+ring unicorn
+bounds:1845,1384,372,186
+offsets:1,1,374,188
+sword
+bounds:408,1311,714,790
+offsets:1,1,716,792
+unicom horn
+bounds:1255,28,311,543
+offsets:11,9,329,571
+unicon body
+bounds:635,568,741,535
+offsets:1,1,743,537
+rotate:90
+unicon ear
+bounds:1576,580,132,206
+offsets:1,1,134,208
+unicon eye
+bounds:2219,1497,117,157
+offsets:1,1,120,159
+rotate:90
+unicon hair
+bounds:2378,1300,308,374
+offsets:1,1,310,376
+rotate:90
+unicon hair 1
+bounds:479,6,238,472
+offsets:1,1,241,474
+unicon hair 2
+bounds:1097,15,156,551
+offsets:1,2,158,554
+unicon head
+bounds:719,14,376,552
+offsets:1,1,379,554
+unicon leg left 1
+bounds:2225,801,216,358
+offsets:1,1,218,360
+unicon leg left 2
+bounds:2349,48,218,485
+offsets:1,1,220,488
+unicon leg right 1
+bounds:2443,796,216,358
+offsets:1,1,218,360
+rotate:90
+unicon leg right 2
+bounds:2569,50,218,483
+offsets:1,1,221,486
+unicon tail
+bounds:1172,775,332,604
+unicon wing
+bounds:1506,788,591,492
+offsets:1,1,593,494
+rotate:90
+unicorn ear left
+bounds:1471,577,103,196
+offsets:2,1,106,198
+unicorn hair 3
+bounds:1845,1572,103,529
+offsets:1,37,106,567
+unicorn line
+bounds:1710,593,193,325
+offsets:1,1,195,327
+rotate:90
+unicorn neck
+bounds:2,1275,404,826
+offsets:1,1,406,828
+vege 1
+bounds:2219,1391,104,147
+offsets:1,1,106,149
+rotate:90
+vege 2
+bounds:2754,1445,72,163
+offsets:1,1,74,165
+wing left 1
+bounds:2,480,631,793
+offsets:11,10,654,817
+wing left 2
+bounds:2047,276,341,300
+offsets:1,1,343,302
+rotate:90
+wing right 1
+bounds:1124,1381,720,719
+offsets:14,10,745,741
+rotate:90
+wing right 2
+bounds:1950,1616,426,485
+offsets:11,11,451,511
+wrap
+bounds:2,2,475,476
+offsets:1,1,478,478

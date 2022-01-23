@@ -1,0 +1,71 @@
+anim_cat_fairy_02.webp
+size:2920,1662
+filter:Linear,Linear
+pma:true
+body
+bounds:1824,25,541,358
+offsets:1,1,544,360
+cloth left
+bounds:1751,385,386,513
+rotate:90
+cloth mid
+bounds:549,345,675,426
+offsets:1,1,677,428
+cloth right
+bounds:2367,68,406,325
+dress left
+bounds:2266,395,436,431
+rotate:90
+dress right
+bounds:694,12,653,331
+eyes
+bounds:2,22,379,159
+offsets:1,1,381,161
+gold
+bounds:383,10,171,169
+offsets:1,2,174,173
+rotate:90
+hand left
+bounds:2066,833,463,297
+offsets:1,1,466,299
+hand right
+bounds:1564,773,500,357
+offsets:1,1,503,359
+head
+bounds:2,183,588,545
+offsets:2,1,592,547
+rotate:90
+leaf 1
+bounds:549,189,143,154
+offsets:1,1,145,157
+leaf 2
+bounds:554,2,71,185
+offsets:1,1,73,187
+leg left
+bounds:2699,581,204,273
+offsets:1,1,206,275
+leg right
+bounds:1349,40,304,473
+offsets:1,1,307,475
+rotate:90
+lotus
+bounds:2602,1245,316,415
+offsets:2,1,320,417
+lotus red
+bounds:1226,346,523,425
+offsets:3,1,529,453
+skirt
+bounds:2531,856,364,274
+offsets:1,1,367,276
+wing left 1
+bounds:2,773,779,887
+offsets:10,11,801,911
+wing left 2
+bounds:1564,1132,517,528
+offsets:14,10,541,552
+wing right 1
+bounds:783,773,779,887
+offsets:12,11,801,911
+wing right 2
+bounds:2083,1132,517,528
+offsets:10,10,541,552

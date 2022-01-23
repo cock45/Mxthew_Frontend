@@ -1,0 +1,60 @@
+anim_cat_alien_03.png
+size:2911,2911
+filter:Linear,Linear
+pma:true
+Ellipse 1
+bounds:2,1925,1464,744
+offsets:44,8,1552,796
+body
+bounds:1468,1002,1017,1266
+offsets:1,1,1019,1268
+rotate:90
+eye
+bounds:1711,58,547,319
+offsets:1,1,549,321
+fire left 1
+bounds:2,11,614,989
+offsets:20,17,666,1039
+fire left 3
+bounds:618,41,475,730
+offsets:24,41,522,801
+fire mid
+bounds:1485,2021,888,1378
+offsets:24,16,933,1427
+rotate:90
+fire right 3
+bounds:2,1013,489,910
+offsets:26,42,540,973
+gum
+bounds:771,773,616,647
+offsets:1,1,618,649
+rotate:90
+hand left
+bounds:1711,379,444,621
+offsets:1,1,447,623
+hand right
+bounds:1095,148,614,623
+offsets:1,1,616,625
+horn left
+bounds:2157,464,388,536
+offsets:2,2,391,539
+horn right
+bounds:493,1027,276,362
+offsets:1,1,279,364
+light
+bounds:2260,2,514,460
+offsets:24,24,551,489
+meat left
+bounds:493,1672,251,103
+offsets:1,1,253,105
+rotate:90
+meat right
+bounds:2736,1888,131,137
+offsets:2,1,134,139
+rotate:90
+mouth
+bounds:618,1391,793,532
+offsets:1,1,796,534
+under body
+bounds:2,2671,1481,238
+offsets:1,1,1483,240
