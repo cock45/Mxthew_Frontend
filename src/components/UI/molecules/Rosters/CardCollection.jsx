@@ -1,22 +1,34 @@
 import styled from "styled-components"
 import React from "react"
 import { RosterCard } from "./RosterCard"
-// import { BlankCard } from "./BlankCard"
 import { StateLabelGroup } from "../LabelGroup/StateLabelGroup"
 import Slider from "react-slick"
 import { MyScrollbar } from "../Scrollbar"
 import { useState } from "react"
+import { useSelector } from "react-redux"
 
 export const CardCollection = (props) => {
     const [currentPage, setCurrentPage] = useState(0)
-    // const handlePrevSlide = () => {
-    //     slider.current.slickPrev();
-    //     currentPage > 1 && setCurrentPage(currentPage - 1);
-    // };
-    // const handleNextSlide = () => {
-    //     slider.current.slickNext();
-    //     currentPage < pageCounter && setCurrentPage(currentPage + 1);
-    // };
+    const collectionCounts = useSelector(state => state.rosterCounter.collection)
+    const roster = {
+        name: 'Freethes',
+        id: 123456,
+        rate: 1,
+        power: 12,
+        acurracy: 12,
+        image: './Images/Monsters/5.png',
+    }
+
+    var rosters = []
+    const totalPages = Math.ceil(collectionCounts / 10)
+    var rostersTemp = []
+    for (let i = 1; i <= collectionCounts; i++) {
+        rostersTemp.push(roster)
+        if (i % 10 === 0 || i / 10 === totalPages) {
+            rosters.push(rostersTemp)
+            rostersTemp = []
+        }
+    }
 
     const settings = {
         dots: true,
@@ -42,8 +54,6 @@ export const CardCollection = (props) => {
             setCurrentPage(current)
         }
     };
-    const pages = [1, 2, 3, 4, 5]
-    const totalPages = pages.length
 
     return (
         <Collection className="card-collection">
@@ -56,82 +66,32 @@ export const CardCollection = (props) => {
                 />
             </div>
             <Slider {...settings} className="d-none d-md-none d-lg-block">
-                {pages.map(page => (
+                {rosters.map(page => (
                     <div>
                         <div className="row">
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
-                            <div className="col-lg-3">
-                                <RosterCard button="Deploy" />
-                            </div>
+                            {page.map(item => (
+                                <div className="col-lg-3">
+                                    <RosterCard button="Deploy" roster={item} />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 ))}
             </Slider>
             <MyScrollbar className="d-block d-md-block d-lg-none">
                 <div className="row">
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
-                    <div className="col-6 col-sm-4">
-                        <RosterCard button="Deploy" />
-                    </div>
+                    {rosters.map(page => (
+                        page.map(item => (
+                            <div className="col-6 col-sm-4">
+                                <RosterCard button="Deploy" roster={item} />
+                            </div>
+                        ))
+                    ))}
                 </div>
             </MyScrollbar>
-            <div className="page-number">{currentPage + 1}/{totalPages}</div>
+            <div className="page-number d-none d-md-none d-lg-block">
+                {currentPage + 1}/{totalPages}
+            </div>
         </Collection>
     )
 }

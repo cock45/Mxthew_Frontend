@@ -6,19 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { rosterClickHandler } from "redux/reducer/rosterClickSlice";
 
 export const Roster = (props) => {
-    // const monsters = [
-    //     {
-    //         name: 'Freethes',
-    //         id: 123456,
-    //         rate: 1,
-    //         power: 12,
-    //         acurracy: 12,
-    //     }
-    // ]
-    // const deckMosters = [
-
-    // ]
-    const monsters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const isRoster = useSelector(state => state.rosterClick.value)
     const dispatch = useDispatch()
 
@@ -26,7 +13,7 @@ export const Roster = (props) => {
         <>
             <div className="container">
                 <div className="main">
-                    <BattleDeck monsters={monsters} />
+                    <BattleDeck />
                     <CardCollection />
                 </div>
             </div>
@@ -36,7 +23,7 @@ export const Roster = (props) => {
             >
                 {isRoster > 0 ? "BATTLE" : "ROSTER"}
             </HistoryButton>
-            <div className="clearfix"></div>
+            <div className="clearfix" />
         </>
     )
 }

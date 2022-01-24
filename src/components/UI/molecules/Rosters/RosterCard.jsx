@@ -2,16 +2,12 @@ import styled from "styled-components"
 import { StateLabelGroup } from "../LabelGroup/StateLabelGroup"
 import { HistoryButton } from "components/UI/atom/button/HistoryButton"
 import { StarBadge } from "components/UI/atom/badge/StarBadge"
+import { useDispatch } from "react-redux"
+import { deployBattle, removeBattle } from "redux/reducer/rostersCounterSlice"
 
 export const RosterCard = (props) => {
-    const monster = {
-        name: 'Freethes',
-        id: 123456,
-        rate: 1,
-        power: 12,
-        acurracy: 12,
-        image: './Images/Monsters/5.png',
-    }
+    const monster = props.roster
+    const dispatch = useDispatch()
 
     return (
         <Body className="roster-card">
@@ -43,7 +39,10 @@ export const RosterCard = (props) => {
                 <StateLabelGroup title="Acurracy" count={monster.acurracy} titleColor="#00c4ee" />
             </div>
             <HistoryButton
-                background={props.button === "Deploy" ? "./Images/Buttons/Group-93-copy.png" : "./Images/Buttons/fight-button.47c09368.png"} className="btn-remove">
+                background={props.button === "Deploy" ? "./Images/Buttons/Group-93-copy.png" : "./Images/Buttons/fight-button.47c09368.png"}
+                className="btn-remove"
+                onClick={() => { props.button === "Deploy" ? dispatch(deployBattle()) : dispatch(removeBattle()) }}
+            >
                 {props.button}
             </HistoryButton>
             {props.button === "Remove" && (

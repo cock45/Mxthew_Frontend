@@ -3,9 +3,23 @@ import { RosterCard } from "./RosterCard"
 import { BlankCard } from "./BlankCard"
 import { StateLabelGroup } from "../LabelGroup/StateLabelGroup"
 import { MyScrollbar } from "../Scrollbar"
+import { useSelector } from "react-redux"
 
 export const BattleDeck = (props) => {
-    // const deckMonsters = [1, 2]
+    const battleCounts = useSelector(state => state.rosterCounter.battle)
+    const roster = {
+        name: 'Freethes',
+        id: 123456,
+        rate: 1,
+        power: 12,
+        acurracy: 12,
+        image: './Images/Monsters/5.png',
+    }
+
+    const rosters = []
+    for (let i = 0; i < battleCounts; i++) {
+        rosters.push(roster)
+    }
 
     return (
         <Deck className="battle-deck">
@@ -19,19 +33,21 @@ export const BattleDeck = (props) => {
             </div>
             <MyScrollbar>
                 <div className="row">
-                    <div className="col-6 col-sm-4 col-lg-6">
-                        <RosterCard button="Remove" />
-                    </div>
-                    <div className="col-6 col-sm-4 col-lg-6">
-                        <RosterCard button="Remove" />
-                    </div>
-
-                    <div className="col-6 col-sm-4 col-lg-6">
-                        <BlankCard />
-                    </div>
+                    {
+                        rosters.map(item => (
+                            <div className="col-6 col-sm-4 col-lg-6">
+                                <RosterCard button="Remove" roster={item} />
+                            </div>
+                        ))
+                    }
                     <div className="col-6 col-sm-4 col-lg-6">
                         <BlankCard />
                     </div>
+                    {battleCounts % 2 === 0 && (
+                        <div className="col-6 col-sm-4 col-lg-6">
+                            <BlankCard />
+                        </div>
+                    )}
                 </div>
             </MyScrollbar>
         </Deck>
