@@ -6,7 +6,6 @@ import {
 } from './index.styles';
 
 const CardAvatar = ({isAnimated, file, width, avatarClass}) => {
-    console.log(file);
     const topDictionary = {
         "reg1": width * 0.1 + 10,
         "reg2": width * 0.1 + 10,
@@ -51,7 +50,11 @@ const CardAvatar = ({isAnimated, file, width, avatarClass}) => {
     }
     return (
         isAnimated ? (
-            <AvatarContainer id={file} style={{width: width, height: width * 0.84, top: width * 0.4}}>
+            <AvatarContainer id={file} style={{
+                width: width, 
+                height: width * 0.84, 
+                top: width * 0.4
+            }}>
                 <PixiAnimation
                     appW={width * 1.5}
                     appH={width * 1.5}

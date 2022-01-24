@@ -19,7 +19,7 @@ const Body = styled.div`
     background-size: cover;
     padding: 10px 20px;
     max-width: 100%;
-
+    min-height: 100vh;
     @media (max-width: 991px) {
         padding: 15px;
         background: url("/Images/mobile-bg.a3c60a42.png") no-repeat 50%;

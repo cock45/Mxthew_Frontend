@@ -6,8 +6,18 @@ import {
     CardComponentsConatiner,
     CardEnemyStats
 } from './index.styles';
-
+import { CardHelper } from "./helper";
 const Card = ({isEnemyCard, isAnimated, level, width, name = null, borderClass = null, avatarClass = null, defenseProps = null}) => {
+    const helper = new CardHelper({
+        isEnemyCard: isEnemyCard, 
+        isAnimated: isAnimated, 
+        level: level, 
+        width: width, 
+        name: name, 
+        borderClass: borderClass, 
+        avatarClass: avatarClass, 
+        defenseProps: defenseProps
+    });
     if(defenseProps == null) {
         const range = {
             1: [15, 30],
@@ -25,6 +35,7 @@ const Card = ({isEnemyCard, isAnimated, level, width, name = null, borderClass =
             chance: 69
         }
     }
+    /*
     const borderSelector = () => {
         if(isEnemyCard) {
             return "Images/Borders/enemy-border-" + level + ".png";
@@ -65,6 +76,9 @@ const Card = ({isEnemyCard, isAnimated, level, width, name = null, borderClass =
                     3: "boder_03_fairy"
                 }
             };
+            if(!isAnimated) {
+                return "Images/Borders/" + borderDictionary[name][level] + ".png";
+            }
             return borderDictionary[name][level];
         }
     }
@@ -149,14 +163,15 @@ const Card = ({isEnemyCard, isAnimated, level, width, name = null, borderClass =
             return "reg" + level;
         }
     }
+    */
     return (
       <CardContainer style={{width: width, height: width * 1.67}}>
           <CardComponentsConatiner>
-              <CardBorder isAnimated={isAnimated && !isEnemyCard} file={borderSelector()} width={width} borderClass={borderClassSelector()}></CardBorder>
-              <CardAvatar isAnimated={isAnimated} file={avatarSelector()} width={width} avatarClass={avatarClassSelector()}></CardAvatar>
+              <CardBorder isAnimated={isAnimated && !isEnemyCard} file={helper.borderSelector()} width={width} borderClass={helper.borderClassSelector()}></CardBorder>
+              <CardAvatar isAnimated={isAnimated} file={helper.avatarSelector()} width={width} avatarClass={helper.avatarClassSelector()}></CardAvatar>
               {
                   isEnemyCard ? (
-                    <CardEnemyStats style={{top: width * 1.34, lineHeight: width * 0.008, fontSize: width * 0.06}}>
+                    <CardEnemyStats style={{top: width * 1.33, lineHeight: width * 1.67 * 0.005, fontSize: width * 0.06}}>
                         Defense: {defenseProps.defense} ({defenseProps.chance}%)
                     </CardEnemyStats>
                   ) : (

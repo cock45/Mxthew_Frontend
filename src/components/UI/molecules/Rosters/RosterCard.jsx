@@ -4,17 +4,26 @@ import { HistoryButton } from "components/UI/atom/button/HistoryButton"
 import { StarBadge } from "components/UI/atom/badge/StarBadge"
 import { useDispatch } from "react-redux"
 import { deployBattle, removeBattle } from "redux/reducer/rostersCounterSlice"
+import CardAvatar from "components/UI/atom/CardAvatar"
+import { CardHelper } from "../Card/helper"
 
 export const RosterCard = (props) => {
     const monster = props.roster
     const dispatch = useDispatch()
+    const helper = new CardHelper({
+        isEnemyCard: false, 
+        isAnimated: true, 
+        level: monster.rate, 
+        name : monster.name
+    });
 
     return (
         <Body className="roster-card">
             <div>
                 <div className="toparea">
                     <div>
-                        <img src="./Images/Assets/shell.png" className="sm-img" style={{ marginRight: '5px' }} />
+                        <img src={"./Images/Assets/" + monster.rarity + "_emblem.png"}
+                        className="sm-img" style={{ marginRight: '5px' }} />
                     </div>
                     <StarBadge
                         rate={monster.rate}
@@ -23,7 +32,7 @@ export const RosterCard = (props) => {
                         blankColor="#042e7e"
                     />
                     <div className="text-right">
-                        <img src="./Images/Assets/monster-id.png" className="sm-img" />
+                        <img src="./Images/Assets/monster-id.png" className="sm-img"/>
                     </div>
                 </div>
                 <div className="name-label">
@@ -32,7 +41,8 @@ export const RosterCard = (props) => {
                 </div>
             </div>
             <div className="img-area">
-                <img src="./Images/Monsters/5.png" />
+                
+                <CardAvatar isAnimated={true} file={helper.avatarSelector()} width={180} avatarClass={helper.avatarClassSelector()}/>
             </div>
             <div className="footer-label">
                 <StateLabelGroup title="Power" count={monster.power} titleColor="#750f29" />
@@ -88,8 +98,12 @@ const Body = styled.div`
 
     .img-area {
         padding: 0px 10px;
+        height: 130px;
     }
-
+    .img-area > * {
+        left: -20px;
+        top: 25px !important;
+    }
     .img-area img {
         max-width: 100%
     }
@@ -180,7 +194,9 @@ const Body = styled.div`
         .time-label label {
             font-size: 16px;
         }
-        
+        .img-area > * {
+            left: -40px;
+        }
     }
     @media (max-width: 991px) {
         width: 200px;
@@ -214,6 +230,10 @@ const Body = styled.div`
             bottom: 20px;
             padding: 0px 10px;
         }
+        .img-area > * {
+            left: 0px;
+            top: 40px !important;
+        }
     }
     
     @media (max-width: 767px) {
@@ -239,6 +259,10 @@ const Body = styled.div`
             height: 30px;
             font-size: 18px !important;
         } 
+        .img-area > * {
+            left: -20px;
+            top: 40px !important;
+        }
     }
 
     @media (max-width: 575px) {
@@ -263,6 +287,10 @@ const Body = styled.div`
             height: 6vw;
             font-size: 18px !important;
         } 
+        .img-area > * {
+            left: 0px;
+            top: 40px !important;
+        }
     }
 
     @media (max-width: 479px) {
@@ -280,6 +308,10 @@ const Body = styled.div`
         }
         .footer-label .title {
             font-size: 14px;
+        }
+        .img-area > * {
+            left: -10px;
+            top: 40px !important;
         }
     }
 `

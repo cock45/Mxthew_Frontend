@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 export const rostersCounterSlice = createSlice({
     name: 'rosterCounter',
     initialState: {
-        collection: 50,
+        collection: 6,
         battle: 2,
     },
     reducers: {

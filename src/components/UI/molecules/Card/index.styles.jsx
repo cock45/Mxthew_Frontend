@@ -15,5 +15,4 @@ export const CardEnemyStats = styled.div`
     width: 100%;
     text-align: center;
     left: 0;
-    border: solid thin transparent;
 `;

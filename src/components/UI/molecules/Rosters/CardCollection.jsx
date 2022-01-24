@@ -11,12 +11,13 @@ export const CardCollection = (props) => {
     const [currentPage, setCurrentPage] = useState(0)
     const collectionCounts = useSelector(state => state.rosterCounter.collection)
     const roster = {
-        name: 'Freethes',
+        name: 'Fraethes',
         id: 123456,
         rate: 1,
         power: 12,
         acurracy: 12,
         image: './Images/Monsters/5.png',
+        rarity: 'rare'
     }
 
     var rosters = []
@@ -29,7 +30,9 @@ export const CardCollection = (props) => {
             rostersTemp = []
         }
     }
-
+    if(rostersTemp.length != 0) {
+        rosters.push(rostersTemp);
+    }
     const settings = {
         dots: true,
         infinite: true,

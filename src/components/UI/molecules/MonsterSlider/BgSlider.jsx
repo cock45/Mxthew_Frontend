@@ -8,6 +8,7 @@ export const BgSlider = (props) => {
         <Body>
             <BaseSlider
                 monsters={monsters}
+                isEnemy={true}
             />
         </Body>
     )

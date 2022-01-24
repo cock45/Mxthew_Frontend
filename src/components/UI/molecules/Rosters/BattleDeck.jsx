@@ -8,12 +8,13 @@ import { useSelector } from "react-redux"
 export const BattleDeck = (props) => {
     const battleCounts = useSelector(state => state.rosterCounter.battle)
     const roster = {
-        name: 'Freethes',
+        name: "Asheal",
         id: 123456,
-        rate: 1,
+        rate: 2,
         power: 12,
         acurracy: 12,
         image: './Images/Monsters/5.png',
+        rarity: 'rare'
     }
 
     const rosters = []
