@@ -77,4 +77,13 @@ const Body = styled.div`
             }
         }
     }
+
+    @media (max-width: 320px) {
+        .labelgroup-mobile {
+            display: block !important;
+            label {
+                font-size: 20px;
+            }
+        }
+    }
 `;

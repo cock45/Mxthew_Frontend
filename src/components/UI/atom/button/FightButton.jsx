@@ -6,7 +6,7 @@ export const FightButton = (props) => {
 
     return (
         <>
-            <RedButton>{children}</RedButton>
+            <RedButton className="btn-fight">{children}</RedButton>
         </>
     )
 }
@@ -28,14 +28,32 @@ const RedButton = styled(BaseButton)`
     }
 
     @media (max-width: 991px) {
-        padding: 5px 28px 15px;
+        width: 60%;
+        height: 6vw;
+        font-size: 2.5vw;
+        margin-top: -10px;
+        padding: 0;
+        padding-bottom: 0.85vw;
     }
 
     @media (max-width: 767px) {
-        padding: 4px 24px 12px;
+        height: 7vw;
+        padding-bottom: 0.9vw;
     }
 
     @media (max-width: 575px) {
-        line-height: 24px;
+        margin-top: -7px;
+        height: 7vw;
+    }
+
+    @media (max-width: 479px) {
+        margin-top: -5px;
+        width: 70%;
+        height: 8vw;
+        padding-bottom: 1vw;
+    }
+
+    @media (max-width: 300px) {
+        margin-top: 0px;
     }
 `;

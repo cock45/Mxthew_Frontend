@@ -19,15 +19,24 @@ const Body = styled.div`
     margin-right: auto;
     margin-top: 30px;
     transition-delay: 2s, 4ms;
-    width: 700px;
+    width: 80vw;
     .monsterCard {
         width: 210px;
         height: 320px;
     }
+    .slick-dots {
+        bottom: 0px !important;
+    }
+    .btn-fight {
+        display: none;
+    }
+
+    .slick-current .btn-fight {
+        display: block !important;
+    }
 
 
     @media (max-width: 767px) {
-        width: 520px;
         margin-top: 20px;
         .monsterCard {
             width: 170px;
@@ -36,11 +45,25 @@ const Body = styled.div`
     }
 
     @media (max-width: 575px) {
-        width: 90vw;
         margin-top: 0px;
         .monsterCard {
             width: 30vw;
             height: 27vh;
+        }
+        .slick-dots {
+            bottom: 20px !important;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .slick-dots {
+            bottom: 30px !important;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .slick-dots {
+            bottom: 20px !important;
         }
     }
 `

@@ -83,6 +83,12 @@ const RewardLabel = styled.div`
     @media (max-width: 575px) {
         padding: 5px 15px 3px;
     }
+
+    @media (max-width: 479px) {
+        padding: 0px !important;
+        background: none;
+        margin: 0px;
+    }
 `;
 
 const Body = styled.div`
@@ -111,6 +117,18 @@ const Body = styled.div`
 
     @media (max-width: 575px) {
         width: 80%;
+    }
+
+    @media (max-width: 479px) {
+        width: 100%;
+        
+        button, label {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 350px) {
+        flex-flow: column;
     }
 `
 

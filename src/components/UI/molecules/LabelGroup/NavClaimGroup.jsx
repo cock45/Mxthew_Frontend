@@ -15,13 +15,15 @@ export const NavClaimGroup = () => {
 
     return (
         <Body>
-            <HistoryButton
-                className="d-block d-md-block d-lg-none"
-                onClick={() => dispatch(rosterClickHandler())}
-            >
-                {isRoster > 0 ? "BATTLE" : "ROSTER"}
-            </HistoryButton>
-            <HistoryButton onClick={() => setIsModalOpen(true)}>HISTORY</HistoryButton>
+            <div className='button-area'>
+                <HistoryButton
+                    className="d-block d-md-block d-lg-none"
+                    onClick={() => dispatch(rosterClickHandler())}
+                >
+                    {isRoster > 0 ? "BATTLE" : "ROSTER"}
+                </HistoryButton>
+                <HistoryButton onClick={() => setIsModalOpen(true)}>HISTORY</HistoryButton>
+            </div>
             <LabelArea>
                 <StateLabelGroup
                     textColor="#ffa200"
@@ -57,6 +59,20 @@ const LabelArea = styled.div`
         background: none;
         padding: 16px 15px;
     }
+
+    @media (max-width: 479px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 16px !important;
+        }
+    }
+    @media (max-width: 350px) {
+        flex-flow: column;
+        align-items: center;
+    }
 `
 
 const Body = styled.div`
@@ -65,6 +81,10 @@ const Body = styled.div`
     label {
         font-size: 24px;
         line-height: 24px;
+    }
+
+    .button-area {
+        display: flex;
     }
 
     @media (max-width: 991px) {
@@ -87,5 +107,24 @@ const Body = styled.div`
     @media (max-width: 575px) {
         padding: 0px;
         margin: 24px 0px 0px;
+    }
+
+    @media (max-width: 479px) {
+        padding: 0px 10px 16px;
+        flex-direction: column-reverse;
+    }
+
+    @media (max-width: 350px) {
+        flex-flow: column-reverse;
+
+        
+        .button-area {
+            flex-direction: row-reverse;
+        }
+        .button-area button {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px 20px;
+        }
     }
 `

@@ -1,6 +1,6 @@
 @media screen and (max-width: 991px) {
     .slick-list {
-        padding: 40px 33% !important;
+        padding: 45px 33% !important;
     }
 }
 
@@ -8,6 +8,11 @@
     margin-top: 30px;
 }
 
+@media screen and (max-width: 320px) {
+    .slick-list {
+        padding: 0px 33% !important;
+    }
+}
 /* 
 
      @keyframes bounceAround {

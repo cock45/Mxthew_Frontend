@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Monstercard } from "../MonsterCard/MonsterCard"
 import { FightButton } from "components/UI/atom/button/FightButton"
 import Card from "../Card"
 
@@ -11,10 +10,7 @@ export const MainSlider = (props) => {
             <div className="row">
                 {monsters.map(monster => (
                     <div className="col-md-3 monster-container">
-                        {/*<Monstercard
-                            monster={monster}
-                        />*/}
-                        <Card level={monster.rate} isEnemyCard={true} isAnimated={true} width={200}/>
+                        <Card level={monster.rate} isEnemyCard={true} isAnimated={true} width={200} />
                         <FightButton>Fight!!!</FightButton>
                     </div>
                 ))}
